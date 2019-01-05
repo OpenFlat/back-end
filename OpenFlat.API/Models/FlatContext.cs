@@ -3,7 +3,7 @@ using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 using OpenFlat.API.Models.Entities;
 
-namespace OpenFlat.API.Model
+namespace OpenFlat.API.Models
 {
     public class FlatContext : DbContext
     {

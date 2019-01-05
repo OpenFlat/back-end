@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using OpenFlat.API.Model;
+using OpenFlat.API.Models;
 
 namespace OpenFlat.API.Migrations
 {
     [DbContext(typeof(FlatContext))]
-    [Migration("20190105195606_InitDb")]
+    [Migration("20190105204011_InitDb")]
     partial class InitDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
