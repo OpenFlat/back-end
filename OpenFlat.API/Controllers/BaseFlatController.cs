@@ -5,7 +5,7 @@ using OpenFlat.API.Models;
 
 namespace OpenFlat.API.Controllers
 {
-    public class BaseFlatController : ControllerBase, IDisposable
+    public abstract class BaseFlatController : ControllerBase, IDisposable
     {
         private FlatContext _db;
         protected FlatContext Db => _db ?? (_db = new FlatContext());

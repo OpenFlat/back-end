@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OpenFlat.API.Models.Entities.Base
 {
-    public class BaseIdentityEntity : BaseEntity, IBaseIdentityEntity
+    public abstract class BaseIdentityEntity : BaseEntity, IBaseIdentityEntity
     {
         [Key]
         [Required]

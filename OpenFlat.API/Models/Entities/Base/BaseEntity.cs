@@ -2,7 +2,7 @@ using System;
 
 namespace OpenFlat.API.Models.Entities.Base
 {
-    public class BaseEntity : IBaseEntity
+    public abstract class BaseEntity : IBaseEntity
     {
 
     }
