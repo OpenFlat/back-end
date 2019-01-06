@@ -9,4 +9,5 @@ How to setup development environment?
   <li>Download and install <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code (powered by OmniSharp)</a></li>
   <li>Download and install <a href="https://marketplace.visualstudio.com/items?itemName=fernandoescolar.vscode-solution-explorer">vscode-solution-explorer</a></li>
   <li>Download and install <a href="https://git-scm.com/">Git</a></li>
+  <li>Download and install <a href="https://www.postgresql.org/download/">Postgresql 11</a></li>
 </ol>
