@@ -8,5 +8,5 @@ How to setup development environment?
   <li>Download and install <a href="https://nodejs.org/en/">Node.js 10.15.0</a></li>
   <li>Download and install <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# for Visual Studio Code (powered by OmniSharp)</a></li>
   <li>Download and install <a href="https://marketplace.visualstudio.com/items?itemName=fernandoescolar.vscode-solution-explorer">vscode-solution-explorer</a></li>
-  <li>Download and install for windows <a href="https://gitforwindows.org/">Git for windows</a></li>
+  <li>Download and install <a href="https://git-scm.com/">Git</a></li>
 </ol>
