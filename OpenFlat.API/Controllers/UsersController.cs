@@ -22,10 +22,7 @@ namespace OpenFlat.API.Controllers
         [HttpGet("activeuser")]
         public IActionResult GetActiveUser()
         {
-            var userId = HttpContext.User.Claims.FirstOrDefault(c => c.Type.EndsWith("nameidentifier"));
-            var userName = HttpContext.User.Claims.FirstOrDefault(c => c.Type.EndsWith("name"));
-            var user = Db.Users.FirstOrDefault(u => u.Id == Convert.ToInt32(userId.Value));
-            return new OkObjectResult(user);
+            return new OkObjectResult(UserDto);
         }
 
         // GET api/values

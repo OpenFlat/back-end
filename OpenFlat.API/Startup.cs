@@ -30,7 +30,7 @@ namespace OpenFlat.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // App settings dosyası okunarak dto ya aktarılıyor...
+            // reading appsettings.json
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
             var appSettings = appSettingsSection.Get<AppSettings>();
@@ -59,7 +59,6 @@ namespace OpenFlat.API
                 {
                     OnTokenValidated = ctx =>
                     {
-                        // Token doğrulanırsa tetilenir. Ekstra işlemler yapılacak ise bu event kullanılabilir.
                         return Task.CompletedTask;
                     },
                     OnAuthenticationFailed = ctx =>
