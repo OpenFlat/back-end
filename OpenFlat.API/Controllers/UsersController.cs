@@ -6,15 +6,26 @@ using OpenFlat.API.Models.Dtos;
 using System.Linq;
 using OpenFlat.API.Models.Entities;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OpenFlat.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : BaseFlatController
     {
         public UsersController(IMapper mapper) : base(mapper)
         {
+        }
+
+        [HttpGet("activeuser")]
+        public IActionResult GetActiveUser()
+        {
+            var userId = HttpContext.User.Claims.FirstOrDefault(c => c.Type.EndsWith("nameidentifier"));
+            var userName = HttpContext.User.Claims.FirstOrDefault(c => c.Type.EndsWith("name"));
+            var user = Db.Users.FirstOrDefault(u => u.Id == Convert.ToInt32(userId.Value));
+            return new OkObjectResult(user);
         }
 
         // GET api/values
