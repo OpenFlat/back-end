@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace OpenFlat.API.Attributes.Base
+namespace OpenFlat.API.Models.Attributes.Base
 {
     public abstract class BaseEntityStatedAttribute : ColumnAttribute
     {

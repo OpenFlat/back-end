@@ -1,9 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using OpenFlat.API.Attributes.Base;
+using OpenFlat.API.Models.Attributes.Base;
 
-namespace OpenFlat.API.Attributes
+namespace OpenFlat.API.Models.Attributes
 {
     public class ColumnCurrentDateTimeAttribute : BaseEntityStatedAttribute
     {

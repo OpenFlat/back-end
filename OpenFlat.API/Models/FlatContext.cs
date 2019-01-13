@@ -6,7 +6,7 @@ using System.Runtime;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
-using OpenFlat.API.Attributes;
+using OpenFlat.API.Models.Attributes;
 using OpenFlat.API.Models.Dtos;
 using OpenFlat.API.Models.Entities;
 using OpenFlat.API.Models.Entities.Base;

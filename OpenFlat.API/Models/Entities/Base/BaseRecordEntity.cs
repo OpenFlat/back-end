@@ -1,6 +1,5 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using OpenFlat.API.Attributes;
 
 namespace OpenFlat.API.Models.Entities.Base
 {
