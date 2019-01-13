@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using OpenFlat.API.Models;
 using OpenFlat.API.Models.Dtos;
 
-namespace OpenFlat.API.Controllers
+namespace OpenFlat.API.Controllers.Base
 {
     public abstract class BaseFlatController : ControllerBase, IDisposable
     {

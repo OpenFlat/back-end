@@ -7,6 +7,7 @@ using System.Linq;
 using OpenFlat.API.Models.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using OpenFlat.API.Controllers.Base;
 
 namespace OpenFlat.API.Controllers
 {
