@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 using OpenFlat.API.Attributes;
+using OpenFlat.API.Models.Dtos;
 using OpenFlat.API.Models.Entities;
 using OpenFlat.API.Models.Entities.Base;
 
@@ -14,16 +15,16 @@ namespace OpenFlat.API.Models
 {
     public class FlatContext : DbContext
     {
-        private readonly User _authorizedUser;
+        private readonly int? _authorizedUserId;
 
         public FlatContext()
         {
-
+            _authorizedUserId = null;
         }
 
-        public FlatContext(User authorizedUser)
+        public FlatContext(int authorizedUserId)
         {
-            _authorizedUser = authorizedUser;
+            _authorizedUserId = authorizedUserId;
         }
 
         private void BeforeSaveChanges()
@@ -41,33 +42,33 @@ namespace OpenFlat.API.Models
                     {
                         prop.SetValue(entity, DateTime.Now);
                     }
-                    if (_authorizedUser != null)
+                    if (_authorizedUserId.HasValue)
                     {
                         var attUser = prop.GetCustomAttribute<ColumnUserAttribute>();
                         if (attUser?.State == entityState)
                         {
-                            prop.SetValue(entity, _authorizedUser.Id);
+                            prop.SetValue(entity, _authorizedUserId.Value);
                         }
                     }
                 }
-                if (_authorizedUser != null && entity is BaseRecordEntity)
+                if (_authorizedUserId.HasValue && entity is BaseRecordEntity)
                 {
                     var recEntity = entity as BaseRecordEntity;
                     if (entityState == EntityState.Added)
                     {
                         recEntity.AddTime = DateTime.Now;
-                        recEntity.AddUserId = _authorizedUser.Id;
+                        recEntity.AddUserId = _authorizedUserId.Value;
                     }
                     if (entityState == EntityState.Modified)
                     {
                         recEntity.UpdTime = DateTime.Now;
-                        recEntity.UpdUserId = _authorizedUser.Id;
+                        recEntity.UpdUserId = _authorizedUserId.Value;
                     }
                     if (entityState == EntityState.Deleted)
                     {
                         this.Entry(entity).State = EntityState.Modified;
                         recEntity.DelTime = DateTime.Now;
-                        recEntity.DelUserId = _authorizedUser.Id;
+                        recEntity.DelUserId = _authorizedUserId.Value;
                         recEntity.Deleted = true;
                     }
                 }

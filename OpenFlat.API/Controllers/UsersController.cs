@@ -23,7 +23,7 @@ namespace OpenFlat.API.Controllers
         [HttpGet("activeuser")]
         public IActionResult GetActiveUser()
         {
-            return new OkObjectResult(UserDto);
+            return new OkObjectResult(AuthorizedUser);
         }
 
         // GET api/values
