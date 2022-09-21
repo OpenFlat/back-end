@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenFlat.API", "OpenFlat.API\OpenFlat.API.csproj", "{A7C7CC61-2E39-4305-B294-02723072711A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenFlat.API", "OpenFlat.API\OpenFlat.API.csproj", "{A7C7CC61-2E39-4305-B294-02723072711A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{733BC848-E75F-4514-80E9-44E2AFF792E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persi", "Persi", "{9A33259D-7567-4F82-B41A-61A41EB07CD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A7C7CC61-2E39-4305-B294-02723072711A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +31,11 @@ Global
 		{A7C7CC61-2E39-4305-B294-02723072711A}.Release|x64.Build.0 = Release|Any CPU
 		{A7C7CC61-2E39-4305-B294-02723072711A}.Release|x86.ActiveCfg = Release|Any CPU
 		{A7C7CC61-2E39-4305-B294-02723072711A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D09E8F02-8D8B-4060-BA50-3961C02B0507}
 	EndGlobalSection
 EndGlobal
